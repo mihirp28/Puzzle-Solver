@@ -5,6 +5,18 @@ or counterclockwise, or (d) rotating the inner ring either clockwise or counterc
 
 For example, here is a sequence of three moves on such a puzzle:
 ![image](https://github.com/user-attachments/assets/4a505211-c261-445e-8783-9a9629b501db)
+The goal of the puzzle is to find a short sequence of moves that restores the canonical configuration (on the left above) given an initial board configuration. We’ve provided skeleton code to get you started. You can run the skeleton code on the command line:
+  python3 solver2023.py [input-board-filename]
+where input-board-filename is a text file containing a board configuration (we have provided an example). You’ll need to complete the function called solve(), which should return a list of valid moves. The moves should be encoded as strings in the following way:
+• For sliding rows, R (right) or L (left), followed by the row number indicating the row to move left or right. The row numbers range from 1-5.
+• For sliding columns, U (up) or D (down), followed by the column number indicating the column to move up or down. The column numbers range from 1-5.
+• For rotations, I (inner) or O (outer), followed by whether the rotation is clockwise (c) or counterclockwise (cc). For example, the above diagram performs the moves L3 (slide row 3 left), D3 (slide column 3 down), Occ (outer counterclockwise), and Ic (inner clockwise).
+
+The initial code does not work correctly (see comments with the code). Using this code as a starting point, implement a fast version, using A* search with a suitable heuristic function that guarantees finding a solution in as few moves as possible. For example, board1.txt can be solved in 11 moves. Try to make your code as fast as possible even for difficult boards, although it is not necessarily possible to quickly solve all puzzles. You will need to be creative with your heuristic function in order to find this solution in less than 15 minutes
+
+In your report, answer the following questions:
+1. In this problem, what is the branching factor of the search tree?
+2. If the solution can be reached in 7 moves, about how many states would we need to explore before we found it if we used BFS instead of A* search? A rough answer is fine
 
 ## Solution
 move_left(sts, r_m): It moves given row (r_m) in board to left by one position, effectively rotating it.
