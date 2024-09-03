@@ -12,7 +12,7 @@ where input-board-filename is a text file containing a board configuration (we h
 • For sliding columns, U (up) or D (down), followed by the column number indicating the column to move up or down. The column numbers range from 1-5.
 • For rotations, I (inner) or O (outer), followed by whether the rotation is clockwise (c) or counterclockwise (cc). For example, the above diagram performs the moves L3 (slide row 3 left), D3 (slide column 3 down), Occ (outer counterclockwise), and Ic (inner clockwise).
 
-The initial code does not work correctly (see comments with the code). Using this code as a starting point, implement a fast version, using A* search with a suitable heuristic function that guarantees finding a solution in as few moves as possible. For example, board1.txt can be solved in 11 moves. Try to make your code as fast as possible even for difficult boards, although it is not necessarily possible to quickly solve all puzzles. You will need to be creative with your heuristic function in order to find this solution in less than 15 minutes
+Implement a fast version, using A* search with a suitable heuristic function that guarantees finding a solution in as few moves as possible. For example, board1.txt can be solved in 11 moves. Try to make your code as fast as possible even for difficult boards, although it is not necessarily possible to quickly solve all puzzles. You will need to be creative with your heuristic function in order to find this solution in less than 15 minutes
 
 1. In this problem, what is the branching factor of the search tree?
 2. If the solution can be reached in 7 moves, about how many states would we need to explore before we found it if we used BFS instead of A* search? A rough answer is fine
